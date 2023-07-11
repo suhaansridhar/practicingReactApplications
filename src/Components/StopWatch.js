@@ -17,11 +17,11 @@ function StopWatch(){
         }
         let interval;
         if(flag){
-            interval = setInterval(() => {
+            interval = setInterval(() => { //mounting the state to the reference interval
                 setSeconds(prevCount => prevCount + 1);
             }, 1000);
         }
-        return () => {
+        return () => { //Unmounting of the reference. 
             clearInterval(interval);
         }
     }, [seconds, flag])
@@ -36,13 +36,14 @@ function StopWatch(){
         setSeconds(0);
         setMinutes(0);
         setHours(0);
+        setFlag(false);
     }
     return(
         <div className="stopwatch--container">
             <div className="stopwatch--timers">
-                <h3><span className='stopwatch--timers--hours'>{hours}</span>hrs </h3>
-                <h3><span className='stopwatch--timers--minutes'>{minutes}</span>mins </h3>
-                <h3><span className='stopwatch--timers--seconds'>{seconds}</span>secs </h3>
+                <h3><span className='stopwatch--timers--hours'>{hours}</span>{hours > 1 ? "hrs": "hr"}</h3>
+                <h3><span className='stopwatch--timers--minutes'>{minutes}</span>{minutes > 1 ? "mins" : "min"} </h3>
+                <h3><span className='stopwatch--timers--seconds'>{seconds}</span>{seconds > 1? "secs" : "sec"} </h3>
             </div>
             <div className="stopwatch--timers--button">
                 <button onClick={startFunction}>Start</button>

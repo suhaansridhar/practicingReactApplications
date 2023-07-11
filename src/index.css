@@ -8,8 +8,15 @@
   display: flex;
   flex-direction: row;
   color: white;
-  background: inherit;
   font-size: 3rem;
+}
+
+.stopwatch--timers:hover{
+  cursor:not-allowed;
+}
+
+.stopwatch--timers h3{
+  margin-right: 0.125rem;
 }
 
 .stopwatch--timers--hours, .stopwatch--timers--minutes, .stopwatch--timers--seconds{
@@ -28,9 +35,7 @@
 }
 
 .stopwatch--timers--button button:hover{
-  border: 0.1rem solid orange;
-  padding: 1rem;
-  border-radius: 0.5rem;
+  color: red;
   cursor: pointer;
 }
 
