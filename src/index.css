@@ -2,21 +2,45 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: white;
-  color: black;
-  position: relative;
 }
 
 .stopwatch--timers{
   display: flex;
   flex-direction: row;
+  color: white;
+  background: inherit;
+  font-size: 3rem;
+}
+
+.stopwatch--timers--hours, .stopwatch--timers--minutes, .stopwatch--timers--seconds{
+  border: 0.1rem solid white;
+  padding: 0.2rem;
+  border-radius: 0.23rem;
+}
+
+.stopwatch--timers--button button{
+  background: inherit;
+  font-size: 2rem;
+  margin-right: 1rem;
+  color: white;
+  border: none;
+  padding: 1rem;
+}
+
+.stopwatch--timers--button button:hover{
+  border: 0.1rem solid orange;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
 }
 
 
 .stopwatch--container{
+  background-image: url("../public/images/background.png");
   display: flex;
   height: 100vh;
   width: 100%;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }

@@ -40,9 +40,9 @@ function StopWatch(){
     return(
         <div className="stopwatch--container">
             <div className="stopwatch--timers">
-                <h3>{hours} hrs</h3>
-                <h3>{minutes} mins</h3>
-                <h3>{seconds} secs</h3>
+                <h3><span className='stopwatch--timers--hours'>{hours}</span>hrs </h3>
+                <h3><span className='stopwatch--timers--minutes'>{minutes}</span>mins </h3>
+                <h3><span className='stopwatch--timers--seconds'>{seconds}</span>secs </h3>
             </div>
             <div className="stopwatch--timers--button">
                 <button onClick={startFunction}>Start</button>
