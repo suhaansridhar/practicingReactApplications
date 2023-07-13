@@ -1,10 +1,10 @@
 import React from 'react';
-import StopWatch from './Components/StopWatch';
+import ToDo from './Components/ToDo';
 
 function App(){
   return(
     <div>
-      <StopWatch />
+      <ToDo />
     </div>
   )
 }
