@@ -60,3 +60,21 @@
   width: 80%;
   background-color: green;
 }
+
+.form--data--container{
+  width: 100%;
+}
+
+.form--container{
+  width: 40%;
+  margin: 20px auto;
+  border: 0.1rem solid black;
+  height: auto;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.submitButton{
+  text-align: center;
+  margin: auto;
+}

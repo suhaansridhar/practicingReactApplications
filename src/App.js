@@ -1,10 +1,10 @@
 import React from 'react';
-import ProgressBar from './Components/ProgressBar';
+import FormData from './Components/FormData';
 
 function App(){
   return(
     <div>
-      <ProgressBar />
+      <FormData />
     </div>
   )
 }
