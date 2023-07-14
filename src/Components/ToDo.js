@@ -1,39 +1,31 @@
 import React from "react";
 
 function ToDo(){
+    const [Task, setTask] = React.useState('');
+    const [array, setArray] = React.useState([]);
 
-    const [taskName, setTaskName] = React.useState('');
-    const [tasks, setTasks] = React.useState([]);
-    function AddTask(){
-        setTasks(prevArray => [...prevArray, taskName]);
-        setTaskName('');
+    function addTask(){
+        setArray(prevArray => [...prevArray, Task]);
+        setTask('');
     }
 
     function deleteTask(id){
-        setTasks(tasks.filter(item => item.index !== id));
+        setArray(array.filter((item, index) => index !== id));
     }
 
     return(
         <div className="todo--container">
-            <div className="todo--main--container">
-                <input 
-                    type="text" 
-                    placeholder="Enter Task: " 
-                    value={taskName} 
-                    name="taskName" 
-                    onChange={(e) => setTaskName(e.target.value)}
-                />
-                <button onClick={AddTask}>Add Task</button>
+            <input type="text" placeholder="Enter the task: " onChange={(e) => setTask(e.target.value)} name='Task' value={Task}/>
+            <button onClick={addTask}>Add</button>
 
-                {tasks.map((item, index) => {
-                    return(
-                        <div key={index}>
-                            <h1>{item}</h1>
-                            <button onClick={deleteTask(index)}>Delete Task</button>
-                        </div>
-                    )
-                })}
-            </div>
+            {array.map((item, index) => {
+                return(
+                    <div key={index}>
+                        <h4>{item}</h4>
+                        <button onClick={() => deleteTask(index)}>Delete</button>
+                    </div>
+                )
+            })}
         </div>
     )
 }
