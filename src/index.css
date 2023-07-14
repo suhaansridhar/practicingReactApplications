@@ -49,3 +49,14 @@
   align-items: center;
   flex-direction: column;
 }
+
+.percent--bar--main--container{
+  width: 200px;
+  border: 0.1rem solid black;
+  height: 20px;
+}
+
+.percent--bar{
+  width: 80%;
+  background-color: green;
+}

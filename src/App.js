@@ -1,10 +1,10 @@
 import React from 'react';
-import ToDo from './Components/ToDo';
+import ProgressBar from './Components/ProgressBar';
 
 function App(){
   return(
     <div>
-      <ToDo />
+      <ProgressBar />
     </div>
   )
 }
